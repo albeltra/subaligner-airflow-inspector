@@ -17,5 +17,7 @@ ARG PATH="/root/miniconda3/bin:${PATH}"
 
 RUN mkdir /scripts
 
+RUN mkdir -p /airflow/xcom
+
 COPY ./inspect.py /scripts/
 ENTRYPOINT ["python3", "/scripts/inspect.py"]
