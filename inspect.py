@@ -2,11 +2,8 @@ import json
 import os
 import base64
 
-print(os.environ.get("mediaFile"))
-print(os.environ.get("mediaInfo"))
-mediaFile = json.loads(os.environ.get("mediaFile"))
-print(mediaFile)
-mediaInfo = json.loads(os.environ.get("mediaInfo"))
+mediaFile = eval(os.environ.get("mediaFile"))
+mediaInfo = eval(os.environ.get("mediaInfo"))
 stream_index = os.environ.get("stream_index") if os.environ.get("stream_index") else "0"
 audio_channel = os.environ.get("audio_channel") if os.environ.get("audio_channel") else "0"
 
