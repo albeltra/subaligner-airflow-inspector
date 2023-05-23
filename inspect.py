@@ -1,8 +1,8 @@
 import json
 import os
 
-mediaFile = os.environ.get("mediaFile")
-mediaInfo = os.environ.get("mediaInfo")
+mediaFile = json.loads(os.environ.get("mediaFile"))
+mediaInfo = json.loads(os.environ.get("mediaInfo"))
 stream_index = os.environ.get("stream_index") if os.environ.get("stream_index") else "0"
 audio_channel = os.environ.get("audio_channel") if os.environ.get("audio_channel") else "0"
 
